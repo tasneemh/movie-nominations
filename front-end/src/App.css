@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid green;
+}
+.body-container {
+  width: 100%;
+  height: 80%;
+  border: 4px solid yellow;
+  display: flex;
+}
+.results-container {
+  width: 50%;
+  border: 1px solid blue;
+  margin: 1em;
+  padding: 1em;
+}
+.nominations-container {
+  width: 50%;
+  border: 1px solid red;
+  margin: 1em;
+  padding: 1em;
+}
