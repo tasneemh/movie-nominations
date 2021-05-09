@@ -20,10 +20,19 @@ body {
   border: 1px solid blue;
   margin: 1em;
   padding: 1em;
+  display: grid;
 }
 .nominations-container {
   width: 50%;
   border: 1px solid red;
   margin: 1em;
   padding: 1em;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.movie-container {
+  border: 1px solid red;
+  grid-template-columns: auto, auto;
 }

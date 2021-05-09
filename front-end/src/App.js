@@ -44,7 +44,11 @@ function App() {
       <SearchForm input={input} setInput={setInput} findMovies={findMovies} />
       {message && <h4>{message}</h4>}
       <div className="body-container">
-        <Results moviesArr={moviesArr} />
+        <Results
+          moviesArr={moviesArr}
+          selectedMovie={selectedMovie}
+          setSelectedMovie={setSelectedMovie}
+        />
         <Nominations
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
