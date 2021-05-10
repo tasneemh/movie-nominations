@@ -4,11 +4,10 @@ This is a full stack web application where users can search for movies and are a
 
 ## Screenshots
 
-!["Screenshot of home page"](https://github.com/tasneemh/image-repository/blob/master/screenshots/home.png?raw=true)
-!["Screenshot of uploaded message"](https://github.com/tasneemh/image-repository/blob/master/screenshots/uploading.png?raw=true)
-!["Screenshot of images"](https://github.com/tasneemh/image-repository/blob/master/screenshots/images.png?raw=true)
-!["Screenshot of missing attachment"](https://github.com/tasneemh/image-repository/blob/master/screenshots/missing.png?raw=true)
-!["Screenshot of duplicate images error"](https://github.com/tasneemh/image-repository/blob/master/screenshots/duplicate.png?raw=true)
+!["Screenshot of home page"](https://github.com/tasneemh/movie-nominations/blob/master/screenshots/home.png?raw=true)
+!["Screenshot of searches1"](https://github.com/tasneemh/movie-nominations/blob/master/screenshots/searches.png?raw=true)
+!["Screenshot of searches2"](https://github.com/tasneemh/movie-nominations/blob/master/screenshots/searches2.png?raw=true)
+!["Screenshot of nominate"](https://github.com/tasneemh/movie-nominations/blob/master/screenshots/nominate.png?raw=true)
 
 # Dependencies
 
@@ -18,12 +17,9 @@ This is a full stack web application where users can search for movies and are a
 - Bootstrap
 - Express (4.17.1)
 - pg (8.6.0)
-- Multer (1.4.2)
-- Form-data (2.3.3)
 - Axios (0.21.1)
 - Nodemon (2.0.7)
 - Cors (2.8.5)
-- Bootstrap
 
 # Technology
 
@@ -38,8 +34,8 @@ This full stack web application is built by using React and CSS on front-end, Ex
   - vagrant up
   - vagrant ssh
   - psql -U development
-  - CREATE DATABASE image_db
-  - \c image_db to connect to the database
+  - CREATE DATABASE nominations_db
+  - \c nominations_db to connect to the database
   - Run command \i back-end/sqlDatabase/migrations/create.sql to create images table
   - \dt to check if the images table is created
   - All the username and password details about the database are available in db.js inside back-end folder.
@@ -49,6 +45,6 @@ This full stack web application is built by using React and CSS on front-end, Ex
 
 # How To Use the App?
 
-- Users can upload the image by clicking on 'SUBMIT' button. Once the image is successfully uploaded they will see a message indicating the same.
-- If users upload duplicate image or fail to upload the image they will get an error message.
-- Users can view all the images available in the database by clicking on 'CLICK HERE!' button.
+- Users can search for the movies in the search bar.
+- They can nominate for movies by clicking on 'Nominate' button.
+- Users can also delete any movie from the nominations list by clicking on 'Delete' button.
