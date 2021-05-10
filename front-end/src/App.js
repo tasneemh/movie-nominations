@@ -9,9 +9,13 @@ require("dotenv").config();
 
 function App() {
   const [input, setInput] = useState("");
+  const [resultArr, setResultArr] = useState([]);
   const [moviesArr, setMoviesArr] = useState([]);
   const [message, setMessage] = useState("");
   const [selectedMovie, setSelectedMovie] = useState({});
+
+  const [nominatedMoviesArr, setNominatedMoviesArr] = useState([]);
+
   const key = process.env.REACT_APP_API_KEY;
 
   const clearMessage = () => {
@@ -19,7 +23,7 @@ function App() {
       setMessage("");
     }, 5000);
   };
-  const findMovies = () => {
+  const getResult = () => {
     const url = `http://www.omdbapi.com/?s=${input}&page=1&apikey=${key}`;
 
     axios
@@ -29,7 +33,7 @@ function App() {
         console.log("response.data.Search: ", response.data.Search);
         const arr = response.data.Search;
         if (arr) {
-          setMoviesArr(arr);
+          setResultArr(arr);
         } else {
           setMessage("Please refine your search");
           clearMessage();
@@ -41,17 +45,23 @@ function App() {
   };
   return (
     <div className="app">
-      <SearchForm input={input} setInput={setInput} findMovies={findMovies} />
+      <SearchForm input={input} setInput={setInput} getResult={getResult} />
       {message && <h4>{message}</h4>}
       <div className="body-container">
         <Results
+          resultArr={resultArr}
           moviesArr={moviesArr}
+          setMoviesArr={setMoviesArr}
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
+          nominatedMoviesArr={nominatedMoviesArr}
+          setNominatedMoviesArr={setNominatedMoviesArr}
         />
         <Nominations
           selectedMovie={selectedMovie}
           setSelectedMovie={setSelectedMovie}
+          nominatedMoviesArr={nominatedMoviesArr}
+          setNominatedMoviesArr={setNominatedMoviesArr}
         />
       </div>
     </div>

@@ -2,37 +2,103 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 html,
 body {
   height: 100vh;
   width: 100vw;
-  border: 1px solid green;
+  background: rgb(255, 255, 255);
 }
 .body-container {
   width: 100%;
   height: 80%;
-  border: 4px solid yellow;
   display: flex;
 }
 .results-container {
   width: 50%;
-  border: 1px solid blue;
   margin: 1em;
   padding: 1em;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .nominations-container {
   width: 50%;
-  border: 1px solid red;
   margin: 1em;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 img {
-  width: 200px;
-  height: 200px;
+  width: 152px;
+  height: 176px;
 }
 .movie-container {
-  border: 1px solid red;
-  grid-template-columns: auto, auto;
+  width: 50%;
+  height: 320px;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5em;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.nominated-movie-container {
+  width: 50%;
+  height: 320px;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5em;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.form-group:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 1em;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid blue; */
+}
+.form-group:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.movie-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.nominated-movie-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.form label {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+button {
+  margin: 0.25em;
+  width: 100px;
 }
